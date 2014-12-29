@@ -1,0 +1,9 @@
+h2 Your Favorites
+//= will_paginate @favorites
+
+== render 'searchform'
+
+- @favorites.each do |favorite|
+  div.results
+    h3 = link_to favorite.title, kb_path(favorite.kba)
+    p.kba = sprintf("KBA%08d", favorite.kba)

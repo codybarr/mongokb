@@ -1,0 +1,37 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Results
+p.kba {
+  color: green;
+
+}
+
+// Favorite Links
+a.favorite {
+  @extend .glyphicon;
+  @extend .glyphicon-star-empty;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    @extend .glyphicon-star;
+  }
+}
+
+// # Pagers
+.pagination {
+  margin: 10px 0;
+}
+
+// # Toolbar
+.toolbar {
+  margin: 10px 0;
+}
+
+// # Footer
+footer {
+  margin: 10px 0;
+  text-align: center;
+}

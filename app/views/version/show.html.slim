@@ -1,0 +1,31 @@
+- if notice
+  p.alert.alert-success = notice
+
+h2
+  = @article.title + ' '
+  span.label.label-default = sprintf("KBA%08d", @article.kba)
+  .small = "Updated: #{@version.updated_at.localtime.strftime('%_m/%e/%Y at %l:%M %p %Z')}"
+
+.toolbar = link_to 'Edit', edit_article_path(@article), class: "btn btn-primary"
+
+h3 Versions
+- if @article.versions.empty?
+  p.lead No previous versions
+- else
+  ul.nav.nav-tabs
+    li.presentation = link_to "Current", kb_path(@article.kba)
+    - @article.versions.reverse.each do |version|
+      li.presentation class=('active' if version.version == @version.version)
+        = link_to version.version, version_path(kba: @article.kba, version: version.version)
+
+h3 Content
+.content = @version.content.html_safe
+
+h3 Attached Files
+- if @version.attachment.url.nil?
+  p No attached files
+- else
+  .files
+    p = link_to File.basename(@version.attachment.url), @version.attachment.url
+
+= link_to "Revert", revert_path(kba: @article.kba, version: @version.version), class: 'btn btn-warning'

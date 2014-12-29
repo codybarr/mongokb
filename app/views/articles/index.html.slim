@@ -1,0 +1,20 @@
+h1 Search Articles
+
+== render 'searchform'
+
+- if @articles.first.nil?
+  p.lead Sorry, there were no results
+- else
+
+  p.lead = "#{pluralize(@articles.count, 'article')} found."
+
+  = will_paginate @articles
+
+  - @articles.each do |article|
+    div.results
+      h3 = link_to article.title, kb_path(article.kba)
+      p.kba = sprintf("KBA%08d", article.kba)
+
+  = will_paginate @articles
+
+div.toolbar = link_to 'New Article', new_article_path, class: "btn btn-success"

@@ -1,0 +1,20 @@
+doctype
+html
+  head
+    title
+      | MongoKB
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  body
+    #wrap
+      = render 'layouts/navbar'
+      .container
+
+        - flash.each do |type, message|
+          p.alert class=(flash_class(type))
+            = message
+
+        = yield
+    footer
+      | Created by Cody Barr.  &copy; 2014.  All rights reserved.
