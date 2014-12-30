@@ -1,34 +1,13 @@
-<<<<<<< HEAD
-== README
+# MongoKB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MongoKB is a simple knowledge base web application I developed for my final project in [CS50](https://cs50.harvard.edu/)
 
-Things you may want to cover:
+## Current Features
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-=======
-The OpenShift `ruby` cartridge documentation can be found at:
-
-http://openshift.github.io/documentation/oo_cartridge_guide.html#ruby
->>>>>>> 1a55c3cfa8eef215fd5cecdd06b681bd3c4dfca8
+* User registration (courtesy of devise)
+  * Favoriting - different users can keep track of their favorite articles
+* Article management
+  * You can create and edit existing articles
+* Versioning
+  * You can keep track of changes to articles
+* Simple searching

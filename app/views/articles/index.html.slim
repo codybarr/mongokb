@@ -6,7 +6,7 @@ h1 Search Articles
   p.lead Sorry, there were no results
 - else
 
-  p.lead = "#{pluralize(@articles.count, 'article')} found."
+  p.lead = "#{pluralize(@articles.pluck.count, 'article')} found."
 
   /  = will_paginate @articles
   
@@ -16,5 +16,5 @@ h1 Search Articles
       p.kba = sprintf("KBA%08d", article.kba)
 
 /  = will_paginate @articles
-
-div.toolbar = link_to 'New Article', new_article_path, class: "btn btn-success"
+- if user_signed_in?
+  div.toolbar = link_to 'New Article', new_article_path, class: "btn btn-success"

@@ -26,7 +26,11 @@
 * attachments
 * versioning
 
-== For Video
+== CS50 Final Project - Video Notes
+Knowledgebase features
+- Motivation for behind building the app
+- 
+
 * Rails
 * Sublime Text
 * Templating engine: http://slim-lang.com/index.html

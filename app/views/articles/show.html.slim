@@ -4,24 +4,23 @@ h2
   // will figure out how to integrate glyph favorite toggle icon later = link_to "", favorite_path(@article.kba), class: "favorite"
   .small = "Updated: #{@article.updated_at.localtime.strftime('%_m/%e/%Y at %l:%M %p %Z')}"
 
-.toolbar
-  // => adds trailing whitespace in slim
-  // https://github.com/slim-template/slim#output-
-  => link_to 'Edit', edit_article_path(@article), class: "btn btn-primary"
-  - if user_signed_in?
+- if user_signed_in?
+  .toolbar
+    / => adds trailing whitespace in slim
+    / https://github.com/slim-template/slim#output-
+    => link_to 'Edit', edit_article_path(@article), class: "btn btn-primary"
     = link_to "#{(@article.users.include? current_user) ? 'Unfavorite' : 'Favorite'}", favorite_path(@article.kba), class: "btn btn-default"
 
-h3 Versions
-- if @article.versions.empty?
-  p.lead No previous versions
-- else
-  ul.nav.nav-tabs
-    li.active role='presentation' = link_to "Current - #{@article.version}", kb_path(@article.kba)
-    - @article.versions.reverse.each do |version|
-      li.presentation
-        = link_to version.version, version_path(kba: @article.kba, version: version.version)
+  h3 Versions
+  - if @article.versions.empty?
+    p.lead No previous versions
+  - else
+    ul.nav.nav-tabs
+      li.active role='presentation' = link_to "Current - #{@article.version}", kb_path(@article.kba)
+      - @article.versions.reverse.each do |version|
+        li.presentation
+          = link_to version.version, version_path(kba: @article.kba, version: version.version)
 
-h3 Content
 .content = @article.content.html_safe
 
 h3 Attached Files
