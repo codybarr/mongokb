@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -35,8 +34,8 @@ gem 'bootstrap-will_paginate'
 
 # for full text search
 # gem 'elasticsearch-model'
-gem 'elasticsearch-rails'
-gem 'mongoid-elasticsearch'
+#gem 'elasticsearch-rails'
+#gem 'mongoid-elasticsearch'
 
 # for attachments
 # gem 'paperclip", '~> 4.1'
