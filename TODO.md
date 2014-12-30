@@ -27,6 +27,9 @@
 * versioning
 
 == For Video
+* Rails
+* Sublime Text
 * Templating engine: http://slim-lang.com/index.html
+* Bootstrap
 * strftotime: http://apidock.com/ruby/v1_9_3_125/Time/strftime (different time zones)
 * Openshift

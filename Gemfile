@@ -46,7 +46,7 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 #gem 'paper_trail'
 gem 'mongoid-versioning'
 
-# seed data
+  # seed data
 gem 'forgery'
 
 # users

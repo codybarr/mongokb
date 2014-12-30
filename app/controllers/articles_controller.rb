@@ -7,7 +7,8 @@ class ArticlesController < ApplicationController
     # @articles = Article.all.limit(10)
 
     if params[:search].present?
-      @articles = Article.es.search params[:search], page: params[:page]
+      @articles = Article.where(title: /#{params[:search]}/i)
+      # @articles = Article.es.search params[:search], page: params[:page]
       # @articles = @articles.results
     else
       @articles = Article.all.limit(10)
