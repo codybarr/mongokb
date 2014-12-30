@@ -1,6 +1,6 @@
 * Fields: Title, KBA#, Keywords, Content, Revision Notes, timestamps
 
-== Features
+# Features
 
 * Test out mongodb text searching (fuzzy)
   * Test on 20K records; find a better forgery generator for article content
@@ -16,24 +16,3 @@
     * techs can add comments to scripts which can be reviewed by kes (marked as accepted, rejected)
     * kes can do everything, including reverting to prior versions
     * managers can add articles to the "recommended reading" section of the homepage
-
-== Steps to build
-
-* Seed data
-* Get KBA#s working
-* Add search
-* mongo indexes
-* attachments
-* versioning
-
-== CS50 Final Project - Video Notes
-Knowledgebase features
-- Motivation for behind building the app
-- 
-
-* Rails
-* Sublime Text
-* Templating engine: http://slim-lang.com/index.html
-* Bootstrap
-* strftotime: http://apidock.com/ruby/v1_9_3_125/Time/strftime (different time zones)
-* Openshift
