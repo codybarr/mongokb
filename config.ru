@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # This file is used by Rack-based servers to start the application.
 
 require ::File.expand_path('../config/environment',  __FILE__)
@@ -299,4 +298,3 @@ WELCOME_CONTENTS
   end
   run welcome
 end
->>>>>>> 1a55c3cfa8eef215fd5cecdd06b681bd3c4dfca8
