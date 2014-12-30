@@ -3,8 +3,8 @@ class Article
   include Mongoid::Document
   # for creation and update times
   include Mongoid::Timestamps
-  #include Mongoid::Paperclip
-  include Mongoid::Elasticsearch
+  # for elasticsearch indexing
+  # include Mongoid::Elasticsearch
   # since I keep updating the schema so frequently....
   include Mongoid::Attributes::Dynamic
   # hopefully for versioning
@@ -31,5 +31,5 @@ class Article
   has_and_belongs_to_many :users
 
   # Elasticsearch
-  elasticsearch!
+  # elasticsearch!
 end

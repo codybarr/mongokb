@@ -8,7 +8,8 @@ h2
   // => adds trailing whitespace in slim
   // https://github.com/slim-template/slim#output-
   => link_to 'Edit', edit_article_path(@article), class: "btn btn-primary"
-  = link_to "#{(@article.users.include? current_user) ? 'Unfavorite' : 'Favorite'}", favorite_path(@article.kba), class: "btn btn-default"
+  - if user_signed_in?
+    = link_to "#{(@article.users.include? current_user) ? 'Unfavorite' : 'Favorite'}", favorite_path(@article.kba), class: "btn btn-default"
 
 h3 Versions
 - if @article.versions.empty?

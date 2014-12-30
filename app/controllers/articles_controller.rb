@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
       @articles = Article.es.search params[:search], page: params[:page]
       # @articles = @articles.results
     else
-      @articles = Article.all.paginate(page: params[:page])
+      @articles = Article.all.limit(10)
     end
   end
 
