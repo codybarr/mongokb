@@ -45,7 +45,3 @@ bus.each do |bu|
     end
   end
 end
-
-article = Article.where(kba: 8911).first
-article.update(content: "version 2")
-article.update(content: "version 3")
